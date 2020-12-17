@@ -1,0 +1,106 @@
+body {
+    text-align: -webkit-center;
+}
+.banner {
+    text-align: -webkit-center;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 50%;
+}
+.banner_slide {
+    position: relative;
+    height: 200px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+.slide_next {
+    float: right;
+}
+.slide_prev {
+    float: left
+}
+
+.slide_menu ul, #slide_menu_1 ul, #slide_menu_2 ul {
+    display: inline-block;
+    margin-top: 7px;
+}
+
+.slide_menu ul li, #slide_menu_1 ul li, #slide_menu_2 ul li {
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    list-style: none;
+    font-size: 35px;
+    color: #acacac;
+}
+
+.slide_menu ul li:last-child, #slide_menu_1 ul li:last-child, #slide_menu_2 ul li:last-child {
+    margin-right: 0px;
+}
+
+.slide_menu ul li.current, #slide_menu_1 ul li.current, #slide_menu_2 ul li.current {
+    color: #00adf1;
+}
+
+.banner_slide ul li {
+    list-style: none;
+    opacity: 0;
+    position: absolute;
+    bottom: 10px;
+    animation-duration: 6s;
+    -webkit-animation-duration: 6s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: bold;
+}
+.banner ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+@keyframes banner_slide_show {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+        z-index: 20;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: 10;
+    }
+}
+
+@-webkit-keyframes banner_slide_show {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+        z-index: 20;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: 10;
+    }
+}
+
+.banner_slide_show {
+    animation-name: banner_slide_show;
+    -webkit-animation-name: banner_slide_show;
+}
+
+.banner_slide ul li a, #slide_menu_1 ul li, #slide_menu_2 ul li {
+    color: #ca0b0b;
+}
