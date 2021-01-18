@@ -17,7 +17,8 @@ body {
     float: right;
 }
 .slide_prev {
-    float: left
+    float: left;
+	transform: rotate(180deg);
 }
 
 .slide_menu ul, #slide_menu_1 ul, #slide_menu_2 ul {
